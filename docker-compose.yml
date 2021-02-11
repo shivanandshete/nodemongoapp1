@@ -2,7 +2,7 @@ version: "3"
 services:
   frontend:
     container_name: frontend_app
-    built: .
+    build: .
     port:
       - "7500:7500"
     networks:
@@ -10,7 +10,7 @@ services:
     links:
       - mongo
   mongo:
-    image_name: mongo
+    image: mongo
     container_name: mongo_db
     ports:
       - "27017:27017"
