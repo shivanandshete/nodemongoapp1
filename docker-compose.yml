@@ -17,7 +17,7 @@ services:
     networks:
       - nodenw
     volumes:
-      - nodevolume:/data/db
+      - nodevolumes:/data/db
 volumes:
   nodevolumes:
 networks:
