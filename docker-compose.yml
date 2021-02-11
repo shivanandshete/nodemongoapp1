@@ -22,4 +22,4 @@ volumes:
   nodevolumes:
 networks:
   nodenw:
-    drivers: "bridge"
+    driver: "bridge"
