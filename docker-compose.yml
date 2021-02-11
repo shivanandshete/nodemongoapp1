@@ -1,0 +1,25 @@
+version: "3"
+services:
+  frontend:
+    container_name: frontend_app
+    built: .
+    port:
+      - "7500:7500"
+    networks:
+      - nodenw
+    links:
+      - mongo
+  mongo:
+    image_name: mongo
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    networks:
+      - nodenw
+    volumes:
+      - nodevolume:/data/db
+volumes:
+  nodevolumes:
+networks:
+  nodenw:
+    drivers: "bridge"
